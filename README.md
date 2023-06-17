@@ -9,5 +9,10 @@ Projeto Desenvolvido exclusivamente por :
 * **FrontEnd:** ReactJs, Bootstrap -
 * **BackEnd:** PHP 8.0.0 -
 
-# Funcionalidades
+# Funcionalidades Imprescindiveis
+* **Signup/Login**
+* **Adicionar ao Carrinho**
+* **Pesquisar Livros**
+* **Visualizar Detalhes do Livro**
+
 Comprar Livro; Publicar para a venda; Avaliar compra 
