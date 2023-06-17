@@ -14,5 +14,11 @@ Projeto Desenvolvido exclusivamente por :
 * **Adicionar ao Carrinho**
 * **Pesquisar Livros**
 * **Visualizar Detalhes do Livro**
+* **Efetuar Compra**
+* **Publicar Livro Para Venda**
 
-Comprar Livro; Publicar para a venda; Avaliar compra 
+# Possíveis Usuários
+* **Anunciante (Editora)**
+* **Comprador**
+
+ 
