@@ -11,9 +11,9 @@ Requisitos Não-Funcionais serão denominados `RNF` e;
 
 ### Será Adotada a Seguinte Prioridade Para Requisitos
 ---
-* Alta: Essa categoria é reservada para requisitos essenciais e críticos que são indispensáveis para o funcionamento básico do sistema.
-* Média: Requisitos com essa prioridade são importantes, mas não críticos para a funcionalidade básica do sistema.
-* Baixa: Requisitos com prioridade baixa são aqueles que não são essenciais e podem ser considerados como melhorias opcionais ou recursos desejáveis, mas não essenciais.
+* Essencial: Essa categoria é reservada para requisitos essenciais e críticos que são indispensáveis para o funcionamento básico do sistema.
+* Importante: Requisitos com essa prioridade são importantes, mas não críticos para a funcionalidade básica do sistema.
+* Desejável: Requisitos com prioridade baixa são aqueles que não são essenciais e podem ser considerados como melhorias opcionais ou recursos desejáveis, mas não essenciais.
  ### Agrupe Corretamente Os Requisitos
  ---
  * Especificar as caracteristicas que devem ser obedecidas ao descrever os requisitos do projeto. 
