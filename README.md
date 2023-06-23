@@ -15,10 +15,9 @@ Projeto Desenvolvido exclusivamente por :
 * **Pesquisar Livros**
 * **Visualizar Detalhes do Livro**
 * **Efetuar Compra**
-* **Publicar Livro Para Venda**
+* **Gerenciar Estoque**
 
 # Possíveis Usuários
-* **Anunciante (Editora)**
-* **Comprador**
+* **Qualquer um interessado em adquirir um Livro**
 
  
