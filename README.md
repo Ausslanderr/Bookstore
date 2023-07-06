@@ -10,7 +10,7 @@ Projeto Desenvolvido exclusivamente por :
 * **Davi Hermógenes Siqueira**
 # Tecnologias
 * **Banco de Dados:** Mysql Community Server 8.0.33 
-* **Servidor: Apache 
+* **Servidor**: Apache 
 * **FrontEnd:** React (Typescript), Bootstrap 
 * **BackEnd:** PHP 
 
