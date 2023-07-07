@@ -9,8 +9,8 @@ A Bookstore, uma livraria local e querida pela comunidade, está em busca de nov
 Projeto Desenvolvido exclusivamente por : 
 * **Davi Hermógenes Siqueira**
 # Tecnologias
-* **BackEnd:** *NodeJs* *Typescript* , *express*, *Mysql* (ou Mongodb)
-* **FrontEnd:** React (Typescript), Bootstrap 
+* **BackEnd:** *NodeJs*, *Typescript* , *express*, *Mysql* (ou Mongodb)
+* **FrontEnd:** *React (Typescript)*, *Bootstrap*
 
 
 # Funcionalidades Imprescindiveis
