@@ -1,0 +1,53 @@
+{
+  "name": "frontemakers",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon db.js",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.0.0",
+    "@fortawesome/react-fontawesome": "^0.1.19",
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mydb": "^3.2.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.4.3",
+    "nodemon": "^1.14.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "react-router-dom": "^6.14.1",
+    "sequelize": "^6.32.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/mysql": "^2.15.21",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "html-loader": "^4.2.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9"
+  },
+  "description": "A Bookstore, uma livraria local e querida pela comunidade, está em busca de novas maneiras de expandir seu alcance e fornecer aos seus clientes uma experiência de compra ainda mais conveniente e agradável. Reconhecendo a crescente popularidade das compras online e a importância de se adaptar às mudanças do mercado, a Bookstore está entusiasmada em anunciar a introdução de seu novo sistema de vendas de livros online.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
