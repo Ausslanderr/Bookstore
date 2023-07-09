@@ -1,4 +1,4 @@
-<h1 align="center" class="text-center"> Bookstore </h1>
+<h2 align="center" class="text-center"> Bookstore </h2>
 
 <p align="center">
   <img src="https://cdn-icons-png.flaticon.com/128/2232/2232688.png" alt="FrontEnd Emakers Logo", width="120", height="120">
