@@ -20,25 +20,24 @@ A Bookstore, uma livraria local e querida pela comunidade, está em busca de nov
   <img src="https://img.shields.io/badge/FrontEnd-React-blue" alt="FrontEnd React">
   <img src="https://img.shields.io/badge/FrontEnd-Bootstrap-blue" alt="FrontEnd Bootstrap">
 </p>
+<p align="center">
+  <ul align="center">
+    <li><em>Signup/Login</em></li>
+    <li><em>Login do Administrador</em></li>
+    <li><em>Adicionar ao Carrinho</em></li>
+    <li><em>Pesquisar Livros</em></li>
+    <li><em>Visualizar Detalhes do Livro</em></li>
+    <li><em>Efetuar Compra</em></li>
+    <li><em>Gerenciar Estoque</em></li>
+    <li><em>Gerenciar Pedidos</em></li>
+    <li><em>Gerenciar Usuários</em></li>
+    <li><em>Efetuar busca de Livros</em></li>
+    <li><em>Gerenciar conta</em></li>
+  </ul>
+</p>
 
-# Tecnologias
-* **BackEnd:** *NodeJs*, *JavaScript* , *express*, *Mysql*
-* **FrontEnd:** *React (Typescript)*, *Bootstrap*
+# Possíveis Usuários
 
-<div align="center">
-  # Funcionalidades Imprescindiveis
-  * *Signup/Login*
-  * *Login do Administrador*
-  * *Adicionar ao Carrinho*
-  * *Pesquisar Livros*
-  * *Visualizar Detalhes do Livro*
-  * *Efetuar Compra*
-  * *Gerenciar Estoque*
-  * *Gerenciar Pedidos*
-  * *Gerenciar Usuários*
-  * *Efetuar busca de Livros*
-  * *Gerenciar conta*
-  # Possíveis Usuários
-  * *Qualquer um interessado em adquirir um Livro*
-
- </div>
+<p align="center">
+  <em>Qualquer um interessado em adquirir um Livro</em>
+</p>
