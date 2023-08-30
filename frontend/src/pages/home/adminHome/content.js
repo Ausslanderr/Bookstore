@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Admin = () => {
-    const {adminUser } = useAuth();
+  
+  const {adminUser } = useAuth();
   return (
     <div style={{ textAlign: 'center', backgroundColor: '#f0f7fb', padding: '20px' }}>
       <h1 style={{textDecoration: 'underline'}}>Painel de Gerenciamento</h1>

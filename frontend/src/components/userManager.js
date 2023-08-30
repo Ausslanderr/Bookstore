@@ -6,7 +6,6 @@ import { useEffect, useState, useRef } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-import Navbar from '../pages/navbar-footer/navbar.js';
 
 const Container = styled.div`
   width: 100%;

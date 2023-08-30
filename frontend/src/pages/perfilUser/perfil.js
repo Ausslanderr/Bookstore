@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Footer from '../navbar-footer/footer';
-import Navbar from '../navbar-footer/navbar';
+
 import NavbarPosLogin from '../navbar-footer/logged-navbar';
 import img from "../../assets/images/user.png"
 import { useLocation } from 'react-router-dom'; // Import useLocation
@@ -155,7 +155,7 @@ useEffect(() => {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group">
-                      <label>Primeiro Nome</label>
+                      <label>Nome completo</label>
                       <input
                         type="text"
                         className="form-control"
@@ -165,7 +165,7 @@ useEffect(() => {
                   </div>
                   <div className="col-md-6">
                     <div className="form-group">
-                      <label>Último Nome</label>
+                      <label>Email</label>
                       <input
                         type="text"
                         className="form-control"
@@ -175,7 +175,7 @@ useEffect(() => {
                   </div>
                   <div className="col-md-6">
                     <div className="form-group">
-                      <label>Email</label>
+                      <label>CPF</label>
                       <input
                         type="text"
                         className="form-control"
@@ -195,24 +195,17 @@ useEffect(() => {
                   </div>
                   <div className="col-md-6">
                     <div className="form-group">
-                      <label>Designação</label>
+                      <label>Nova Senha</label>
                       <input
-                        type="text"
+                        type="password"
                         className="form-control"
                         
                       />
                     </div>
                   </div>
-                  <div className="col-md-12">
-                    <div className="form-group">
-                      <label>Bio</label>
-                      <textarea className="form-control" ></textarea>
-                    </div>
-                  </div>
                 </div>
                 <div>
-                  <button className="btn btn-primary">Update</button>
-                  <button className="btn btn-light">Cancel</button>
+                  <button style={{marginTop:'10px'}} className="btn btn-dark">Atualizar</button>
                 </div>
               </div>
               <div

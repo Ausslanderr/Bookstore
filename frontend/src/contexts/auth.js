@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
       if (response.data === "Login successful.") {
         const token = Math.random().toString(36).substring(2);
         localStorage.setItem("user_token", JSON.stringify({email, token}));
-        //setUser({email, Senha});
+       
         setUser(email);
         return "Login successful.";
       } else if (response.data === "Admin Login successful") {
@@ -54,28 +54,7 @@ export const AuthProvider = ({ children }) => {
       console.error("Signin error:", error);
       return "Erro ao fazer login. Verifique suas credenciais.";
     }
-    try{
-      const response = await axios.post("http://localhost:8800/loginAdmin",{
-        email:email,
-        Senha:Senha,
-      })
-      if (response.data === "Admin Login successful"){
-        const token = Math.random.toString(36).substring(2);
-        localStorage.setItem("user_token", JSON.stringify({email, token}));
-        setAdminUser(email);
-        return "Login successful.";
-      }else {
-        
-        return response.data; // Return error messages
-      }
-    }
-    catch (error) {
-      console.error("Signin error:", error);
-      return "Erro ao fazer login. Verifique suas credenciais.";
-    }
-    console.log(email);
   };
-  
   const signup = async (email, Senha) => {
     try {
       const response = await axios.post("http://localhost:8800/addUser", {
@@ -94,7 +73,6 @@ export const AuthProvider = ({ children }) => {
       return "Erro ao criar usuário. Verifique os dados inseridos.";
     }
   };
-
   const signout = async () => {
     try {
       await axios.post("http://localhost:8800/logout"); // Clear session on the server
@@ -104,7 +82,6 @@ export const AuthProvider = ({ children }) => {
       console.error("Signout error:", error);
     }
   };
-
   return (
     <AuthContext.Provider
       value={{ user, adminUser, signed: !!user, signin, signup, signout }}

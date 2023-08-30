@@ -8,7 +8,6 @@ import UserManager from "../components/userManager.js";
 import Add from "../components/books/Add.js";
 import Carrinho from "../pages/perfilUser/carrinho.js";
 import Books from "../components/books/Books.js";
-import Navbar from "../pages/navbar-footer/navbar.js";
 import Footer from "../pages/navbar-footer/footer.js";
 import ProductDetails from "../pages/produtos/Produto.js";
 import NavbarPosLogin from "../pages/navbar-footer/logged-navbar.js";
@@ -24,15 +23,15 @@ import ModalPagamento from "../pages/perfilUser/modal.js";
 import Manager from "../components/pedidoManager/Manager.js";
 import ManagerPedidos from "../components/pedidoManager/Manager.js";
 import Admin from "../pages/home/adminHome/content.js";
-
+/*
 const RoutesApp = () =>{
-    const { user } = useAuth();
+    const { user, adminUser } = useAuth();
     console.log("user index.js:", user);
     return (
         //<BrowserRouter>
         /*
         Tratar o gerenciamento de estoque !!!
-        */ 
+        
         <AuthProvider>
             <NavbarPosLogin/>
             <Fragment>
@@ -64,3 +63,47 @@ const RoutesApp = () =>{
 };
 export default RoutesApp
 
+*/
+const RoutesApp = () => {
+    const { user, adminUser } = useAuth();
+    console.log("user index.js:", user);
+
+    return (
+        <AuthProvider>
+            <NavbarPosLogin/>
+            <Fragment>
+                <Routes>
+                    {/* Rotas para usuários administradores */}
+                    
+                    <Route path="/admin" element={<Admin />} />
+                    <Route path="/gerenciar-pedidos" element={<ManagerPedidos />} />
+                    <Route path="/gerenciar-usuarios" element={<UserManager />} />
+                    <Route path="gerenciar-estoque" element={<BookManager />} />
+                        
+                    
+                    <Route path="/pedidos" element={<Pedidos />} />
+                    <Route path="/conta" element={<Conta />} />
+                    <Route path="/carrinho" element={<Carrinho />} />
+                     
+
+                    {/* Rotas comuns acessíveis para todos */}
+                    <Route path="/app" element={<App />} />
+                    <Route path="/sobre" element={<Sobre />} />
+                    <Route exact path="/produto/:idLivro" element={<ProductDetails />} />
+                    <Route exact path="/" element={<Home />} />
+                    <Route path="/login" element={<Signin />} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/add" element={<Add />} />
+                    <Route path="/books" element={<Books />} />
+                    <Route path="/payment" element={<ModalPagamento />} />
+
+                    {/* Rota padrão para URLs não correspondentes */}
+                    <Route path="*" element={<Home />} />
+                </Routes>
+            </Fragment>
+            <Footer/>
+        </AuthProvider>
+    );
+};
+
+export default RoutesApp;

@@ -49,9 +49,7 @@ const Button = styled.button`
 function Login() {
   axios.defaults.withCredentials = true;
   const {signin} = useAuth();
-  
   const navigate = useNavigate();
-
   const emailRef = useRef();
   const senhaRef = useRef();
   //const [email, setEmail] = useState("");
@@ -60,16 +58,13 @@ function Login() {
   const [loggedInUserEmail, setLoggedInUserEmail] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const email = emailRef.current.value;
     const Senha = senhaRef.current.value;
     //const nome = nomeRef.current.value;
     //const teste = signin(email, Senha);
-
     if (!email || !Senha) {
       return toast.warn("Preencha todos os campos!");
     }
-    
     const response = await signin(email, Senha);
 
     if (response === "Login successful.") {
@@ -92,58 +87,21 @@ function Login() {
         
       }, tempoDeEspera);
     }
-    
     else {
       toast.error(response);
     }
-    /*
-    try {
-      const response = await axios.post("http://localhost:8800/login", {
-        email: email,
-        Senha: Senha,
-        
-      }).then((response)=>{
-        if (response.data.message){
-          setLoginStatus(response.data.message);
-
-        }else {
-          toast.error(response);
-          setLoginStatus(response.data[0].email);
-        }
-      })
-      //const token = Math.random().toString(36).substring(2);
-      //localStorage.setItem("user_token", JSON.stringify({email, token}));
-      console.log(emailRef);
-      toast.success("Login successful!");
-      navigate("/");
-      
-      //const token = response.data.token;
-      //localStorage.setItem("authToken", token);
-
-      // Perform any necessary actions, like storing tokens or redirecting
-    } catch (error) {
-      toast.error("Erro ao fazer login. Verifique suas credenciais.");
-      console.error("Login error:", error);
-    }
-  */
     emailRef.current.value = "";
     senhaRef.current.value = "";
-  
   };
   useEffect(()=>{
     axios.get("http://localhost:8800/login").then((response)=> {
     if (response.data.loggedIn === true){
       setLoggedInUserEmail(response.data.user[0].email);
-      //window.location.href = `/conta?email=${response.data.user[0].email}`;
-      //history.push(`/conta?email=${response.data[0].email}`);
-
     }
-    
     })
   }, [])
   return (
     <div>
-    
     <FormContainer onSubmit={handleSubmit}>
       <InputArea>
         <Label>E-mail</Label>
@@ -163,5 +121,4 @@ function Login() {
     </div>
   );
 }
-
 export default Login;

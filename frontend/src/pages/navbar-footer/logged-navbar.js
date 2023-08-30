@@ -2,8 +2,6 @@ import {Link} from 'react-router-dom';
 import logo from '../../assets/images/Closed_Book_Icon.svg.png'; // substitua o caminho pela localização correta da imagem
 import cart from '../../assets/images/shopping-cart.png';
 import userFoto from '../../assets/images/user.png'
-import Footer from './footer';
-import Carousel from '../home/carousel';
 import {useNavigate} from "react-router-dom"
 import { useState } from 'react';
 import React, { useEffect } from 'react';
@@ -15,13 +13,6 @@ function NavbarPosLogin(){
   const { adminUser} = useAuth();
   const [showOptions, setShowOptions] = useState(false);
   console.log("email do admin: ", adminUser );
-  /*
-  useEffect(()=>{
-    const storedUser = getCookie("userId");
-    if (storedUser){
-      setUser(storedUser);
-    }
-  })*/
   const handleLogOut = async (e) =>{
     try{
       await signout();
@@ -32,27 +23,7 @@ function NavbarPosLogin(){
   }
   const toggleOptions = () => {
     setShowOptions(!showOptions);
-  };
-  /*
-  const navigate = useNavigate();
-
-  if (user === null){
-    //window.location.href =("/login");
-    
-  }*/
-
-  /*{ user!=null ? (
-                <Link to={"/conta"}  style={{ marginRight: '7px' }} >
-                <img src={userFoto} alt="" style={{width:'25px', height:'25px', marginRight: '15px'}} />
-                
-                </Link> )
-                : (<Link to={"/login"}>
-                <button className="btn btn-outline-success" type="submit">
-                  Login
-                </button>
-                </Link>)
-              }*/ 
-
+  }; 
   console.log(user);
     return (
       <div style={{color:'gray'}}>
@@ -121,13 +92,20 @@ function NavbarPosLogin(){
                   </Link>
                 </li>
               </ul>
+              
               <form className="d-flex" role="search">
+                {/*
                 <input
                   className="form-control me-2"
                   type="search"
                   placeholder="Procure Autores ou Títulos"
                   aria-label="Search"
                 />
+                  <button style={{ marginRight:'5px'}} className="btn btn-primary" type="submit">
+                    <i className="fas fa-search"></i> {/* Ícone de lupa do FontAwesome }
+                  </button>
+             */ }
+
                 {user != null ? (
                 <div style={{ position: 'relative' }}>
                   <img

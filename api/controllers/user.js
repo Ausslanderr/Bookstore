@@ -500,8 +500,8 @@ export const logOut = (req, res) => {
 export const logUser = (req, res) => {
   const q = "SELECT * FROM usuario WHERE email = ?";
   const values = [req.body.email];
-  console.log("Email:", req.body.email);
-  console.log("Senha:", req.body.Senha);
+  //console.log("Email:", req.body.email);
+  //console.log("Senha:", req.body.Senha);
   db.query(q, values, (err, userData) => {
     if (err) return res.json(err);
 
@@ -515,7 +515,7 @@ export const logUser = (req, res) => {
         if (match) {
           // Login successful
           req.session.user = userData;
-          console.log(req.session.user);
+          //console.log(req.session.user);
           return res.status(200).json("Login successful.");
         } 
       });
@@ -527,7 +527,7 @@ export const logUser = (req, res) => {
         if (adminErr) return res.json(adminErr);
 
         if (adminData.length === 1) {
-          console.log("entrei aqqq")
+          //console.log("entrei aqqq")
           // Verifique a senha do administrador usando bcrypt.compare
           bcrypt.compare(req.body.Senha, adminData[0].Senha, (adminCompareErr, adminMatch) => {
             if (adminCompareErr) {
@@ -537,7 +537,7 @@ export const logUser = (req, res) => {
             if (adminMatch) {
               // Admin login successful
               req.session.user = adminData;
-              console.log(req.session.user);
+              //console.log(req.session.user);
               return res.status(200).json("Admin Login successful");
             } else {
               return res.status(401).json("Credenciais inválidas");
@@ -548,49 +548,9 @@ export const logUser = (req, res) => {
         }
       });
     }
-    /*
-    else {
-      return res.status(401).json("Credenciais inválidas");
-    }*/
   });
- /*
-  const q = "SELECT * FROM usuario WHERE email = ? AND Senha = ?";
-  const values = [req.body.email, req.body.Senha];
-  console.log("Email:", req.body.email, "Senha:", req.body.Senha);
-  db.query(q, values, (err, data) => {
-    if (err) return res.json(err);
-
-    console.log("Query Result:", data);
-    if (data.length === 1) {
-      // Login successful
-      req.session.user = data;
-      console.log(req.session.user);
-      return res.status(200).json("Login successful.");
-    } else {
-        const w = "SELECT * FROM administrador WHERE Email = ? AND Senha = ?";
-        const values2 = [req.body.email, req.body.Senha];
-        console.log("Email do admin: ", req.body.email,"Senha", req.body.Senha);
-        db.query(w, values2, (err, data) =>{
-          console.log("fez a query")
-          if (err) return res.json(err);
-      
-          console.log("query result admin> ", data);
-          if (data.length === 1){
-            // Login successful
-            req.session.user = data;
-            console.log("deu certo@")
-            console.log(req.session.user);
-            return res.status(200).json("Admin Login successful");
-          } else {
-            return res.status(401).json("credenciais inválidas")
-          }
-        });
-      // Login failed
-      
-    }
-  });*/
 };
-
+//module.exports = (logUser)
 export const updateUser = (req, res) => {
   const q =
     "UPDATE usuario SET `nome` = ?, `email` = ?, `fone` = ?, `data_nascimento` = ?, `CPF` = ?, `Senha`= ?  WHERE `idUsuario` = ?";

@@ -3,6 +3,7 @@ import { addAddress, addAdmin, addCarrinho, addUser, alterarEndereco, alterarPed
 import { addBook, atualizarLivro, deleteBook, getLivroById, listarLivros } from "../controllers/book.js";
 const router = express.Router()
 
+
 router.get("/", getUsers)
 
 router.put("/alterarPedido/:idPedido", alterarPedido)
@@ -48,7 +49,7 @@ router.delete("/removerItem", removerItem);
 router.get("/getNome", getNome);
 
 router.post("/login", logUser);
-//router.get("produto/:idLivro", getLivroById);
+
 router.get("/livros/:idLivro", getLivroById);
 
 router.get("/livros", listarLivros);

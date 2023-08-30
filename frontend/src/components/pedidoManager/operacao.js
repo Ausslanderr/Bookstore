@@ -173,13 +173,14 @@ function DetalhePedido({ idPedido }) {
               {/* Outros detalhes do livro aqui */}
             </div>
           )}
-          <form ref={formRef2} onSubmit={handleSubmitItem} /*onSubmit={(e)=>handleSubmitItem(e, item.idPedido, item.idLivro)}*/>
+          {/*verificar a chamada de função abaixo. */}
+          {/*onSubmit={(e)=>handleSubmitItem(e, item.idPedido, item.idLivro)}*/}
           {/* Renderizar a Form de edição com base no livro atualmente editado */}
           {editingBookId === livroDetalhes?.idLivro && (
             <div>
               {/* Renderizar a Form de edição com os campos correspondentes */}
               {/* Por exemplo: */}
-            
+            <form ref={formRef2} onSubmit={handleSubmitItem}>
             <div>
                 <p>id do Pedido:</p>
                 <input className="form-control" name="idPedido" type="text" defaultValue={item.idPedido} />
@@ -200,10 +201,11 @@ function DetalhePedido({ idPedido }) {
               <div>
                 <button className="btn btn-primary" onClick={()=>handleSubmitItem( item.idPedido, item.idLivro)} type="submit"  >Salvar</button>
               </div>
-               
+              </form>
             </div>
+            
           )}
-          </form>
+          
         </div>
       );
     })}
@@ -278,55 +280,8 @@ function DetalhePedido({ idPedido }) {
       </div>
     ))}
     
-    {/*
-      <h3>Endereço de entrega</h3>
-      {endereco.map((endereco)=>(
-        <div  style={{
-            border: "1px solid #ccc",
-            borderRadius: "5px",
-            padding: "10px",
-            marginBottom: "20px",
-            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-        }}>
-            
-            <h3>Bairro: {endereco.Bairro}</h3>
-            <h3>Rua: {endereco.Rua}</h3>
-            <h3>Número: {endereco.Numero}</h3>
-            <h3>Estado: {endereco.Estado}</h3>
-            <h3>Cidade: {endereco.Cidade}</h3>
-            <h3>Cep: {endereco.CEP}</h3>
-        </div>
-        
-      ))}
-    */}
+    
     </div>
   );
-/*
-  return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
-      <h2>Detalhes do Pedidos</h2>
-      {itensPedido.map((item) => (
-        <div
-          key={item.idItemPedido}
-          style={{
-            border: "1px solid #ccc",
-            borderRadius: "5px",
-            padding: "10px",
-            marginBottom: "20px",
-            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-          }}
-        >
-          <h3>ID do Item do Pedido: {item.idItemPedido}</h3>
-          {/* Mostrar mais detalhes do item aqui }
-        </div>
-      ))}
-      <div style={{ border: "1px solid #ccc", borderRadius: "5px", padding: "20px", boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" }}>
-        <h3>ID do Pedido: {order.idPedido}</h3>
-        <p>Total do Pedido: R$ {order.totalPedido}</p>
-        <p>Data: {order.dataPedido}</p>
-        {/* Add more details here }
-      </div>
-    </div>
-  );*/
 }
 export default DetalhePedido;

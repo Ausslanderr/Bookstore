@@ -1,10 +1,10 @@
 import React from 'react';
 
-import banner01 from '../../assets/images/banner01.jpg';
-import banner02 from '../../assets/images/banner2.jpg';
-import banner03 from '../../assets/images/banner3.jpg';
+import banner01 from '../../assets/images/bookstore03.png';
+import banner02 from '../../assets/images/bookstore02.png';
+import banner03 from '../../assets/images/bookstore01.jpg';
 import NavbarPosLogin from '../navbar-footer/logged-navbar';
-import Navbar from '../navbar-footer/navbar'
+
 function Carousel() {
   return (
     <div>
@@ -16,13 +16,13 @@ function Carousel() {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={banner01} className="d-block w-100" alt="banner1" />
+            <img src={banner01}  style={{ height:'450px'}} className="d-block w-100" alt="banner1" />
           </div>
           <div className="carousel-item">
-            <img src={banner02} className="d-block w-100" alt="banner2" />
+            <img src={banner02} style={{ height:'450px'}} className="d-block w-100" alt="banner2" />
           </div>
           <div className="carousel-item">
-            <img src={banner03} className="d-block w-100" alt="banner3" />
+            <img src={banner03} style={{ height:'450px'}} className="d-block w-100" alt="banner3" />
           </div>
         </div>
         <button

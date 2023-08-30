@@ -42,7 +42,13 @@ function ManagerPedidos() {
   // Função para carregar os pedidos (substitua com a lógica adequada)
   const [searchId, setSearchId] = useState(""); // Estado para armazenar o ID de busca
   const [originalPedidos, setOriginalPedidos] = useState([]); // Estado para armazenar a lista original de pedidos
-  
+  const handleSearch = () => {
+    // Filtrar os pedidos com base no ID de busca
+    const filteredPedidos = originalPedidos.filter((pedido) =>
+        pedido.idPedido === searchId
+    );
+    setPedidos(filteredPedidos);
+};
   const toggleModal = ()=>{
     setIsModalOpen(!isModalOpen);
   }
@@ -70,15 +76,6 @@ function ManagerPedidos() {
       toast.error("Erro ao deletar pedido.")
     }
   }
-
-  const handleSearch = () => {
-    // Filtrar os pedidos com base no ID de busca
-    const filteredPedidos = originalPedidos.filter((pedido) =>
-      pedido.idPedido === searchId
-    );
-    setPedidos(filteredPedidos);
-  };
-  
   useEffect(() => {
     carregarPedidos();
   }, []);
@@ -144,10 +141,11 @@ function ManagerPedidos() {
           placeholder="Digite o ID do Pedido"
           value={searchId}
           onChange={(e) => setSearchId(e.target.value)}
-        />
+        />{/*
         <button className="btn btn-primary" onClick={handleSearch}>
           Buscar
         </button>
+  */}
       </div>
      
       <PedidoContainer
@@ -155,7 +153,8 @@ function ManagerPedidos() {
       >
         <PedidoList style={{ justifyContent: "center" }}>
           {/* Lista de pedidos*/}
-          {pedidos.slice(0,itensExibidos).map((pedido, index) => (
+          {pedidos
+          .filter((pedido)=>searchId === "" || pedido.idPedido === parseInt(searchId)).slice(0,itensExibidos).map((pedido, index) => (
             <div
               key={index}
               style={{
@@ -170,8 +169,9 @@ function ManagerPedidos() {
               <h3>ID do Pedido: {pedido.idPedido}</h3>
               <p>Total do Pedido: R$ {pedido.totalPedido}</p>
               {/* Renderizar opções de edição somente para o pedido selecionado */}
-              <form ref={formRef} onSubmit={(e) => e.preventDefault()}>
+              
               {editingOrderId === pedido.idPedido && (
+                <form ref={formRef} onSubmit={(e)=>e.preventDefault()}>
                 <div>
                   <h5>Altere os dados do pedido</h5>
                   <p>Status: </p>
@@ -188,9 +188,9 @@ function ManagerPedidos() {
                   </div>
                   <br/>
                 </div>
-                
+                </form>
               )}
-              </form>
+              
               <br/>
               <button
                 className="btn btn-primary"

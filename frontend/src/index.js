@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom/client';
 import {BrowserRouter, createBrowserRouter, RouterProvider} from "react-router-dom"
 import Login from './pages/signin/signin'
 import Signup from './pages/signup/signup'
-import Navbar from './pages/navbar-footer/navbar';
 import Footer from './pages/navbar-footer/footer';
 //import Login from '../src/pages/signin/signin'
 import RoutesApp from './routes';

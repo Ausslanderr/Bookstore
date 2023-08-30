@@ -1,6 +1,5 @@
 
 import img from "../../assets/images/loginImage.jpg";
-import Navbar from "../navbar-footer/navbar";
 import React from "react";
 
 function RecuperarSenha(){
