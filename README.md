@@ -9,19 +9,23 @@ A Bookstore, uma livraria local e querida pela comunidade, está em busca de nov
 Projeto Desenvolvido exclusivamente por : 
 * **Davi Hermógenes Siqueira**
 # Tecnologias
-* **BackEnd:** *NodeJs*, *Typescript* , *express*, *Mysql*
+* **BackEnd:** *NodeJs*, *JavaScript* , *express*, *Mysql*
 * **FrontEnd:** *React (Typescript)*, *Bootstrap*
 
 
 # Funcionalidades Imprescindiveis
-* **Signup/Login**
-* **Adicionar ao Carrinho**
-* **Pesquisar Livros**
-* **Visualizar Detalhes do Livro**
-* **Efetuar Compra**
-* **Gerenciar Estoque**
-
+* *Signup/Login*
+* *Login do Administrador*
+* *Adicionar ao Carrinho*
+* *Pesquisar Livros*
+* *Visualizar Detalhes do Livro*
+* *Efetuar Compra*
+* *Gerenciar Estoque*
+* *Gerenciar Pedidos*
+* *Gerenciar Usuários*
+* *Efetuar busca de Livros*
+* *Gerenciar conta*
 # Possíveis Usuários
-* **Qualquer um interessado em adquirir um Livro**
+* *Qualquer um interessado em adquirir um Livro*
 
  
