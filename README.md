@@ -25,17 +25,17 @@ A Bookstore, uma livraria local e querida pela comunidade, está em busca de nov
 
 <p align="center">
   <ul align="center">
-    <li><em>Signup/Login</em></li>
-    <li><em>Login do Administrador</em></li>
-    <li><em>Adicionar ao Carrinho</em></li>
-    <li><em>Pesquisar Livros</em></li>
-    <li><em>Visualizar Detalhes do Livro</em></li>
-    <li><em>Efetuar Compra</em></li>
-    <li><em>Gerenciar Estoque</em></li>
-    <li><em>Gerenciar Pedidos</em></li>
-    <li><em>Gerenciar Usuários</em></li>
-    <li><em>Efetuar busca de Livros</em></li>
-    <li><em>Gerenciar conta</em></li>
+    <li><em>✅ Signup/Login</em></li>
+    <li><em>✅ Login do Administrador</em></li>
+    <li><em>✅ Adicionar ao Carrinho</em></li>
+    <li><em>✅ Pesquisar Livros</em></li>
+    <li><em>✅ Visualizar Detalhes do Livro</em></li>
+    <li><em>✅ Efetuar Compra</em></li>
+    <li><em>✅ Gerenciar Estoque</em></li>
+    <li><em>✅ Gerenciar Pedidos</em></li>
+    <li><em>✅ Gerenciar Usuários</em></li>
+    <li><em>✅ Efetuar busca de Livros</em></li>
+    <li><em>✅ Gerenciar conta</em></li>
   </ul>
 </p>
 
