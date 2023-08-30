@@ -25,20 +25,20 @@ A Bookstore, uma livraria local e querida pela comunidade, está em busca de nov
 * **BackEnd:** *NodeJs*, *JavaScript* , *express*, *Mysql*
 * **FrontEnd:** *React (Typescript)*, *Bootstrap*
 
+<div align="center">
+  # Funcionalidades Imprescindiveis
+  * *Signup/Login*
+  * *Login do Administrador*
+  * *Adicionar ao Carrinho*
+  * *Pesquisar Livros*
+  * *Visualizar Detalhes do Livro*
+  * *Efetuar Compra*
+  * *Gerenciar Estoque*
+  * *Gerenciar Pedidos*
+  * *Gerenciar Usuários*
+  * *Efetuar busca de Livros*
+  * *Gerenciar conta*
+  # Possíveis Usuários
+  * *Qualquer um interessado em adquirir um Livro*
 
-# Funcionalidades Imprescindiveis
-* *Signup/Login*
-* *Login do Administrador*
-* *Adicionar ao Carrinho*
-* *Pesquisar Livros*
-* *Visualizar Detalhes do Livro*
-* *Efetuar Compra*
-* *Gerenciar Estoque*
-* *Gerenciar Pedidos*
-* *Gerenciar Usuários*
-* *Efetuar busca de Livros*
-* *Gerenciar conta*
-# Possíveis Usuários
-* *Qualquer um interessado em adquirir um Livro*
-
- 
+ </div>
