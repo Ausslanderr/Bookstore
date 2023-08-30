@@ -20,6 +20,9 @@ A Bookstore, uma livraria local e querida pela comunidade, está em busca de nov
   <img src="https://img.shields.io/badge/FrontEnd-React-blue" alt="FrontEnd React">
   <img src="https://img.shields.io/badge/FrontEnd-Bootstrap-blue" alt="FrontEnd Bootstrap">
 </p>
+
+# Funcionalidades Imprescindíveis
+
 <p align="center">
   <ul align="center">
     <li><em>Signup/Login</em></li>
@@ -38,6 +41,5 @@ A Bookstore, uma livraria local e querida pela comunidade, está em busca de nov
 
 # Possíveis Usuários
 
-<p align="center">
-  <em>Qualquer um interessado em adquirir um Livro</em>
-</p>
+* *Qualquer um interessado em adquirir um Livro*
+
