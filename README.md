@@ -16,7 +16,7 @@ A Bookstore, uma livraria local e querida pela comunidade, está em busca de nov
   <img src="https://img.shields.io/badge/BackEnd-NodeJs-brightgreen" alt="BackEnd NodeJs">
   <img src="https://img.shields.io/badge/BackEnd-JavaScript-yellow" alt="BackEnd JavaScript">
   <img src="https://img.shields.io/badge/BackEnd-Express-blue" alt="BackEnd Express">
-  <img src="https://img.shields.io/badge/BackEnd-Mysql-blue" alt="BackEnd Mysql">
+  <img src="https://img.shields.io/badge/DataBase-Mysql-blue" alt="BackEnd Mysql">
   <img src="https://img.shields.io/badge/FrontEnd-React-blue" alt="FrontEnd React">
   <img src="https://img.shields.io/badge/FrontEnd-Bootstrap-blue" alt="FrontEnd Bootstrap">
 </p>
