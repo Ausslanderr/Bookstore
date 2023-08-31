@@ -12,17 +12,27 @@ import axios from "axios";
 
 function Conta() {
   const location = useLocation();
-  //const queryParams = new URLSearchParams(location.search);
-  //toast.success("Login sucessful");
-  //const email = queryParams.get('email');
-  //const user = useAuth();
   const {user} = useAuth();
   const {userData} = useAuth();
   const [activeTab, setActiveTab] = useState('account');
-  //const { data: userIdData } =  await axios.get(`http://localhost:8800/getNome?email=${user}`);
-  //const nome = userIdData.nome;
   const [userName, setUserNome] = useState('');
-
+  
+  const [dadosUser, setDadosUser] = useState([]);
+  useEffect(()=>{
+    const fetchUserData = async ()=>{
+      try {
+        const response = await axios.get(`http://localhost:8800/getUserData?email=${user}`);
+        setDadosUser(response.data);
+        console.log(dadosUser[0].nome, dadosUser[0].CPF);
+        console.log();
+        console.log(response);
+      }
+      catch(error){
+        console.error('Erro fetching userData', error);
+      }
+    }
+    fetchUserData();
+  }, [user]);
 useEffect(() => {
   const fetchUserIdData = async () => {
     try {
@@ -34,9 +44,13 @@ useEffect(() => {
       console.error('Error fetching userIdData:', error);
     }
   };
+  
 
   fetchUserIdData();
 }, [user]);
+useEffect(()=>{
+
+})
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
@@ -151,6 +165,7 @@ useEffect(() => {
                 role="tabpanel"
                 aria-labelledby="account-tab"
               >
+               <form>
                 <h3 className="mb-4">Informações da Conta</h3>
                 <div className="row">
                   <div className="col-md-6">
@@ -159,7 +174,7 @@ useEffect(() => {
                       <input
                         type="text"
                         className="form-control"
-                       
+                        defaultValue={dadosUser.length > 0 ? dadosUser[0].nome : ''}
                       />
                     </div>
                   </div>
@@ -169,7 +184,7 @@ useEffect(() => {
                       <input
                         type="text"
                         className="form-control"
-                        
+                        defaultValue={dadosUser.length > 0 ? dadosUser[0].email : ''}
                       />
                     </div>
                   </div>
@@ -179,7 +194,7 @@ useEffect(() => {
                       <input
                         type="text"
                         className="form-control"
-                        
+                        defaultValue={dadosUser.length > 0 ? dadosUser[0].CPF : ''}
                       />
                     </div>
                   </div>
@@ -189,10 +204,11 @@ useEffect(() => {
                       <input
                         type="text"
                         className="form-control"
-                        
+                        defaultValue={dadosUser.length > 0 ? dadosUser[0].fone : ''}
                       />
                     </div>
                   </div>
+                  {/*
                   <div className="col-md-6">
                     <div className="form-group">
                       <label>Nova Senha</label>
@@ -203,10 +219,13 @@ useEffect(() => {
                       />
                     </div>
                   </div>
+              */}
                 </div>
+                
                 <div>
                   <button style={{marginTop:'10px'}} className="btn btn-dark">Atualizar</button>
                 </div>
+                </form>
               </div>
               <div
                 className={`tab-pane fade ${

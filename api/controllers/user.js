@@ -717,3 +717,27 @@ export const cadastrarPedido = async (req,res)=> {//passando o IdPedido
     return res.status(500).json({error:'erro ao cadastrar pedido'});
   }
 }
+
+export const getuserData = async (req, res)=>{
+  console.log("entrei no getUserData agora")
+  const email = req.query.email;
+  console.log("EMAIL PASSADO: ", email)
+  try {
+    const query = "SELECT nome, email, fone, CPF FROM usuario WHERE email = ?";
+    db.query(query, [email], (err, dados)=>{
+      if (err){
+        console.log("Erro ao realizar query", err);
+        return res.status(500).json("Erro ao buscar dados user");
+      }
+      console.log("Deu certo o getUserData")
+      //console.log(dados[0].nome)
+      return res.status(200).json(dados)
+      
+    })
+    
+  }
+  catch(error){
+    console.error("Erro ao buscar usuario backend:", error);
+    res.status(500).json({error: "erro ao buscar dados do usuário"});
+  }
+}

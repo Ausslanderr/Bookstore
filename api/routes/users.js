@@ -1,10 +1,12 @@
 import express from "express";
-import { addAddress, addAdmin, addCarrinho, addUser, alterarEndereco, alterarPedido, atualizarItemPedido, cadastrarPedido, deletarItemPedido, deletarPedido, deleteUser, getEndereco, getItensPedido, getLivros, getNome, getPedidos, getUserId, getUsers,  inserirItemPedido,  listarCarrinho,  listarPedidos,  logOut,  logUser, realizarPedido, removerItem, updateUser } from "../controllers/user.js";
+import { addAddress, addAdmin, addCarrinho, addUser, alterarEndereco, alterarPedido, atualizarItemPedido, cadastrarPedido, deletarItemPedido, deletarPedido, deleteUser, getEndereco, getItensPedido, getLivros, getNome, getPedidos, getUserId, getUsers,  getuserData,  inserirItemPedido,  listarCarrinho,  listarPedidos,  logOut,  logUser, realizarPedido, removerItem, updateUser } from "../controllers/user.js";
 import { addBook, atualizarLivro, deleteBook, getLivroById, listarLivros } from "../controllers/book.js";
 const router = express.Router()
 
 
 router.get("/", getUsers)
+
+router.get("/getUserData", getuserData);
 
 router.put("/alterarPedido/:idPedido", alterarPedido)
 
