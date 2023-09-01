@@ -3,7 +3,7 @@ import Carousel from "./carousel";
 import { Link } from "react-router-dom";
 import shrek from "../../assets/images/homo-deus-1.jpg"
 import axios from "axios";
-  
+import img from "../../assets/images/loading.jpg"
 function Home (){
     const [pedidos, setPedidos] = useState([]);
     const [books, setBooks] = useState([]);
@@ -13,8 +13,6 @@ function Home (){
     const handleBuy = async (e) =>{
         // Ver mais tarde
     }
-    
-    
     
     useEffect(()=> {
         fetch('http://localhost:8800/livros')
@@ -80,7 +78,7 @@ function Home (){
                     margin: "10px",
                     boxSizing: "border-box"
                   }} >
-                <img src={book.image} width={'200px'} height={'280px'} alt={book.Titulo} />
+                <img src={img} width={'300px'} height={'280px'} alt={book.Titulo} />
                 <h3 className="mb-3" >{book.Titulo}</h3>
                 <p><strong>{book.Autor}</strong></p>
                 <p><strong>R${book.Preco}</strong></p>

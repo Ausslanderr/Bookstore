@@ -733,9 +733,7 @@ export const getuserData = async (req, res)=>{
       console.log("Deu certo o getUserData")
       //console.log(dados[0].nome)
       return res.status(200).json(dados)
-      
     })
-    
   }
   catch(error){
     console.error("Erro ao buscar usuario backend:", error);
@@ -745,8 +743,6 @@ export const getuserData = async (req, res)=>{
 
 export const alterarDadosUsuario = async (req, res)=>{
   const { nome, email, CPF, Telefone } = req.body;
-  console.log("entrei no alterarDadosUsuario----------------")
-  
   try {
     const updateUserDataQuery = `
       UPDATE usuario
@@ -761,10 +757,6 @@ export const alterarDadosUsuario = async (req, res)=>{
       }
       return res.status(200).json("Dados atualizados com sucesso!!!!!")
     })
-    /*
-    await db.query(updateUserDataQuery, [nome, email, CPF, Telefone])
-    res.status(200).json({ message: "Dados do usuário atualizados com sucesso!" });
-    */
   } catch (error) {
     console.error("Erro ao atualizar dados do usuário:", error);
     res.status(500).json({ error: "Erro ao atualizar dados do usuário" });

@@ -58,27 +58,5 @@ function ProductDetails() {
       </div>
     </div>
   )
-  /*(
-    
-    <div className="container my-5">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <div className="d-flex justify-content-between align-items-start">
-          <img src={img} width={'250px'} height={'300px'}  alt={product.Titulo} className="img-fluid" />
-          </div>
-          <div className="ml-4" > 
-            <h2>{product.Titulo}</h2>
-            <p>Publicado por {product.Editora}</p>
-            <p>Escrito por {product.Autor}</p>
-            <p>{product.Descricao}</p>
-            <p>R${product.Preco}</p>
-            <p>Publicado em {product.dataPublicacao}</p>
-            <button className="btn btn-primary" >Adicionar ao Carrinho</button>
-          {/* ... other details ... }
-          </div>
-        </div>
-      </div>
-    </div>
-  );*/
 }
 export default ProductDetails;

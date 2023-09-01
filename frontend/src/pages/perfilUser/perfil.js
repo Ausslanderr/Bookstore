@@ -1,8 +1,5 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import Footer from '../navbar-footer/footer';
-
-import NavbarPosLogin from '../navbar-footer/logged-navbar';
 import img from "../../assets/images/user.png"
 import { useLocation } from 'react-router-dom'; // Import useLocation
 import { toast } from "react-toastify";
@@ -28,11 +25,12 @@ function Conta() {
       Telefone: formData.get("Telefone")
     }
     try {
-      console.log("CHEEEEEEGUEI AQUIIIIIIIIIIIIIII")
       const response = await axios.put("http://localhost:8800/alterarDadosUsuario", userData);
       console.log(response.data); // Log the response from the backend
+      toast.success("Os Dados foram alterados com sucesso.")
     } catch (error) {
       console.error("Erro ao atualizar dados do usuário:", error);
+      toast.error("Erro ao atualizar os dados.")
     }
   }
   const [dadosUser, setDadosUser] = useState([]);

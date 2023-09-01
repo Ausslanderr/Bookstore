@@ -25,16 +25,7 @@ describe('Teste de Login', () => {
         req
       });
 
-    //expect(response.data).not.toBeNull();
     expect(response.data).toBe("Admin Login successful");
-    //expect(response.json).toBe('Admin Login successful');
   });
 
 });
-
-////"test": "react-scripts test", no package.json script do frontend
-// package.json "jest": {
-    /*"transform": {
-        "^.+\\.[t|j]sx?$": "babel-jest"
-      }
-    }*/
