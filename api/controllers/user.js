@@ -552,6 +552,7 @@ export const logUser = (req, res) => {
 };
 //module.exports = (logUser)
 export const updateUser = (req, res) => {
+  console.log("Entrei no updateUser do manager")
   const q =
     "UPDATE usuario SET `nome` = ?, `email` = ?, `fone` = ?, `data_nascimento` = ?, `CPF` = ?, `Senha`= ?  WHERE `idUsuario` = ?";
 
@@ -739,5 +740,33 @@ export const getuserData = async (req, res)=>{
   catch(error){
     console.error("Erro ao buscar usuario backend:", error);
     res.status(500).json({error: "erro ao buscar dados do usuário"});
+  }
+}
+
+export const alterarDadosUsuario = async (req, res)=>{
+  const { nome, email, CPF, Telefone } = req.body;
+  console.log("entrei no alterarDadosUsuario----------------")
+  
+  try {
+    const updateUserDataQuery = `
+      UPDATE usuario
+      SET nome = ?, CPF = ?, fone = ?
+      WHERE email = ?
+    `; 
+    await db.query(updateUserDataQuery, [nome, CPF, Telefone, email], (error)=>{
+      if (error){
+        console.log(error);
+        console.log("Deu erro!!!");
+        return res.status(500).json("Erro ao atualizar dados", error);
+      }
+      return res.status(200).json("Dados atualizados com sucesso!!!!!")
+    })
+    /*
+    await db.query(updateUserDataQuery, [nome, email, CPF, Telefone])
+    res.status(200).json({ message: "Dados do usuário atualizados com sucesso!" });
+    */
+  } catch (error) {
+    console.error("Erro ao atualizar dados do usuário:", error);
+    res.status(500).json({ error: "Erro ao atualizar dados do usuário" });
   }
 }

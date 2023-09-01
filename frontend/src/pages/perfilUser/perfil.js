@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Footer from '../navbar-footer/footer';
 
 import NavbarPosLogin from '../navbar-footer/logged-navbar';
@@ -12,11 +12,29 @@ import axios from "axios";
 
 function Conta() {
   const location = useLocation();
+  const formRef = useRef();
   const {user} = useAuth();
   const {userData} = useAuth();
   const [activeTab, setActiveTab] = useState('account');
   const [userName, setUserNome] = useState('');
-  
+  const handleAlterUser = async (event) =>{
+    event.preventDefault();
+    const formData = new FormData(formRef.current);
+    console.log("Entrei no handleAlterUser");
+    const userData = {
+      nome: formData.get("nome"),
+      email: formData.get("email"),
+      CPF: formData.get("CPF"),
+      Telefone: formData.get("Telefone")
+    }
+    try {
+      console.log("CHEEEEEEGUEI AQUIIIIIIIIIIIIIII")
+      const response = await axios.put("http://localhost:8800/alterarDadosUsuario", userData);
+      console.log(response.data); // Log the response from the backend
+    } catch (error) {
+      console.error("Erro ao atualizar dados do usuário:", error);
+    }
+  }
   const [dadosUser, setDadosUser] = useState([]);
   useEffect(()=>{
     const fetchUserData = async ()=>{
@@ -24,7 +42,6 @@ function Conta() {
         const response = await axios.get(`http://localhost:8800/getUserData?email=${user}`);
         setDadosUser(response.data);
         console.log(dadosUser[0].nome, dadosUser[0].CPF);
-        console.log();
         console.log(response);
       }
       catch(error){
@@ -165,14 +182,16 @@ useEffect(()=>{
                 role="tabpanel"
                 aria-labelledby="account-tab"
               >
-               <form>
+               
                 <h3 className="mb-4">Informações da Conta</h3>
+                <form ref={formRef} onSubmit={handleAlterUser}>
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group">
                       <label>Nome completo</label>
                       <input
                         type="text"
+                        name='nome'
                         className="form-control"
                         defaultValue={dadosUser.length > 0 ? dadosUser[0].nome : ''}
                       />
@@ -183,6 +202,7 @@ useEffect(()=>{
                       <label>Email</label>
                       <input
                         type="text"
+                        name='email'
                         className="form-control"
                         defaultValue={dadosUser.length > 0 ? dadosUser[0].email : ''}
                       />
@@ -193,6 +213,7 @@ useEffect(()=>{
                       <label>CPF</label>
                       <input
                         type="text"
+                        name='CPF'
                         className="form-control"
                         defaultValue={dadosUser.length > 0 ? dadosUser[0].CPF : ''}
                       />
@@ -203,6 +224,7 @@ useEffect(()=>{
                       <label>Telefone</label>
                       <input
                         type="text"
+                        name='Telefone'
                         className="form-control"
                         defaultValue={dadosUser.length > 0 ? dadosUser[0].fone : ''}
                       />
@@ -223,7 +245,7 @@ useEffect(()=>{
                 </div>
                 
                 <div>
-                  <button style={{marginTop:'10px'}} className="btn btn-dark">Atualizar</button>
+                  <button style={{marginTop:'10px'}} type="submit" className="btn btn-dark">Atualizar</button>
                 </div>
                 </form>
               </div>

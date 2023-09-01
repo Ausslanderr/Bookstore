@@ -1,5 +1,5 @@
 import express from "express";
-import { addAddress, addAdmin, addCarrinho, addUser, alterarEndereco, alterarPedido, atualizarItemPedido, cadastrarPedido, deletarItemPedido, deletarPedido, deleteUser, getEndereco, getItensPedido, getLivros, getNome, getPedidos, getUserId, getUsers,  getuserData,  inserirItemPedido,  listarCarrinho,  listarPedidos,  logOut,  logUser, realizarPedido, removerItem, updateUser } from "../controllers/user.js";
+import { addAddress, addAdmin, addCarrinho, addUser, alterarDadosUsuario, alterarEndereco, alterarPedido, atualizarItemPedido, cadastrarPedido, deletarItemPedido, deletarPedido, deleteUser, getEndereco, getItensPedido, getLivros, getNome, getPedidos, getUserId, getUsers,  getuserData,  inserirItemPedido,  listarCarrinho,  listarPedidos,  logOut,  logUser, realizarPedido, removerItem, updateUser } from "../controllers/user.js";
 import { addBook, atualizarLivro, deleteBook, getLivroById, listarLivros } from "../controllers/book.js";
 const router = express.Router()
 
@@ -15,6 +15,8 @@ router.post("/addAdmin", addAdmin);
 router.put("/alterarEndereco/:idPedido", alterarEndereco);
 
 router.delete("/deletePedido/:idPedido", deletarPedido);
+
+router.put("/alterarDadosUsuario", alterarDadosUsuario);
 
 router.delete("/deleteItemPedido/:idPedido/:idLivro", deletarItemPedido);
 
