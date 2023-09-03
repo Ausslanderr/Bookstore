@@ -2,8 +2,7 @@
 
 <p align="center">
   <img src="https://cdn-icons-png.flaticon.com/128/10384/10384254.png"  alt="FrontEnd Emakers Logo", width="120", height="120">
-</p>
-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Closed_Book_Icon.svg/1200px-Closed_Book_Icon.svg.png"                    
+</p>                
 A MononokeTales é um website especializado na venda de mangás e comics, oferecendo uma ampla seleção de títulos para entusiastas de todas as idades. Com uma interface intuitiva e recursos de busca avançados, os clientes podem facilmente encontrar e adquirir suas obras favoritas. Além disso, a MononokeTales se destaca por sua entrega rápida e atendimento ao cliente excepcional, tornando-se o destino ideal para os amantes da cultura japonesa e dos quadrinhos.
 
 
