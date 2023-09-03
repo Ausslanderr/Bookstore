@@ -38,6 +38,8 @@ Projeto Desenvolvido exclusivamente por:
 ## Possíveis Usuários do Sistema
 - Qualquer pessoa interessada em cultura japonesa e mangás no geral.
 
+
+
 ## Como Usar
 Clone o repositório, crie o banco de dados utilizando o código que o Gera e siga os seguintes passos: 
 1. Acesse o diretório principal e use o comando ```npm install```

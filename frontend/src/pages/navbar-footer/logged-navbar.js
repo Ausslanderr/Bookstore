@@ -51,9 +51,9 @@ function NavbarPosLogin(){
             </button>
             <div className="collapse navbar-collapse"  id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
+                <li className="nav-item" style={{textDecoration:'none'}}>
                   <Link to={"/"}>
-                  <a  className="nav-link active" aria-current="page" href="#">
+                  <a style={{textDecoration:'none'}} className="nav-link active no-underline" aria-current="page" href="#">
                     Home
                   </a>
                   </Link>
