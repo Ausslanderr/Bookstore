@@ -1,10 +1,10 @@
-<h2 align="center" style="color: #007BFF;" class="text-center"> Bookstore </h2>
+<h2 align="center" style="color: #007BFF;" class="text-center"> MononokeTales </h2>
 
 <p align="center">
   <img src="https://cdn-icons-png.flaticon.com/128/1282/1282987.png"  alt="FrontEnd Emakers Logo", width="120", height="120">
 </p>
 src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Closed_Book_Icon.svg/1200px-Closed_Book_Icon.svg.png"                    
-A Bookstore, uma livraria local e querida pela comunidade, está em busca de novas maneiras de expandir seu alcance e fornecer aos seus clientes uma experiência de compra ainda mais conveniente e agradável. Reconhecendo a crescente popularidade das compras online e a importância de se adaptar às mudanças do mercado, a Bookstore está entusiasmada em anunciar a introdução de seu novo sistema de vendas de livros online.  
+A MononokeTales é um website especializado na venda de mangás e comics, oferecendo uma ampla seleção de títulos para entusiastas de todas as idades. Com uma interface intuitiva e recursos de busca avançados, os clientes podem facilmente encontrar e adquirir suas obras favoritas. Além disso, a MononokeTales se destaca por sua entrega rápida e atendimento ao cliente excepcional, tornando-se o destino ideal para os amantes da cultura japonesa e dos quadrinhos.
 
 
  <p align="center">
