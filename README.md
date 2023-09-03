@@ -1,16 +1,17 @@
-<h2 align="center" style="color: #007BFF;" class="text-center"> MononokeTales </h2>
+<h2 align="center" style="color: #007BFF;" class="text-center"> Sobre o Projeto - MononokeTales </h2>
 
 <p align="center">
-  <img src="https://cdn-icons-png.flaticon.com/128/10384/10384254.png"  alt="FrontEnd Emakers Logo", width="120", height="120">
+  <img src="https://cdn-icons-png.flaticon.com/128/10384/10384254.png"  alt="MononokeTales Logo", width="120", height="120">
 </p>                
-A MononokeTales é um website especializado na venda de mangás e comics, oferecendo uma ampla seleção de títulos para entusiastas de todas as idades. Com uma interface intuitiva e recursos de busca avançados, os clientes podem facilmente encontrar e adquirir suas obras favoritas. Além disso, a MononokeTales se destaca por sua entrega rápida e atendimento ao cliente excepcional, tornando-se o destino ideal para os amantes da cultura japonesa e dos quadrinhos.
 
+## Descrição
+A **MononokeTales** é um website especializado na venda de mangás e comics, oferecendo uma ampla seleção de títulos para entusiastas de todas as idades. Com uma interface intuitiva e recursos de busca avançados, os clientes podem facilmente encontrar e adquirir suas obras favoritas. Além disso, a MononokeTales se destaca por sua entrega rápida e atendimento ao cliente excepcional, tornando-se o destino ideal para os amantes da cultura japonesa e dos quadrinhos.
 
- <p align="center">
-  Projeto Desenvolvido exclusivamente por:<br>
-  <strong>Davi Hermógenes Siqueira</strong>
-</p>
+## Criador
+Projeto Desenvolvido exclusivamente por:
+- **Davi Hermógenes Siqueira**
 
+## Tecnologias Utilizadas
 <p align="center">
   <img src="https://img.shields.io/badge/BackEnd-NodeJs-brightgreen" alt="BackEnd NodeJs">
   <img src="https://img.shields.io/badge/BackEnd-JavaScript-yellow" alt="BackEnd JavaScript">
@@ -19,38 +20,20 @@ A MononokeTales é um website especializado na venda de mangás e comics, oferec
   <img src="https://img.shields.io/badge/FrontEnd-React-blue" alt="FrontEnd React">
   <img src="https://img.shields.io/badge/FrontEnd-Bootstrap-blue" alt="FrontEnd Bootstrap">
 </p>
-### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+## Funcionalidades Imprescindíveis
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+- **Signup/Login**: Os usuários podem se cadastrar e fazer login em suas contas.
+- **Login do Administrador**: O administrador tem um login exclusivo com permissões especiais.
+- **Adicionar ao Carrinho**: Os usuários podem adicionar livros ao carrinho de compras.
+- **Pesquisar Livros**: Os usuários podem pesquisar livros por título.
+- **Visualizar Detalhes do Livro**: Os usuários podem ver os detalhes de um livro.
+- **Efetuar Compra**: Os usuários podem efetuar compras.
+- **Gerenciar Estoque**: O administrador pode gerenciar o estoque de livros.
+- **Gerenciar Pedidos**: O administrador pode gerenciar os pedidos dos clientes.
+- **Gerenciar Usuários**: O administrador pode gerenciar contas de usuários.
+- **Efetuar busca de Livros**: Os usuários podem buscar livros.
+- **Gerenciar conta**: Os usuários podem gerenciar suas contas.
 
-# Funcionalidades Imprescindíveis
-
-<p align="center">
-  <ul align="center">
-    <li><em> Signup/Login</em></li>
-    <li><em> Login do Administrador</em></li>
-    <li><em> Adicionar ao Carrinho</em></li>
-    <li><em> Pesquisar Livros</em></li>
-    <li><em> Visualizar Detalhes do Livro</em></li>
-    <li><em> Efetuar Compra</em></li>
-    <li><em> Gerenciar Estoque</em></li>
-    <li><em> Gerenciar Pedidos</em></li>
-    <li><em> Gerenciar Usuários</em></li>
-    <li><em> Efetuar busca de Livros</em></li>
-    <li><em> Gerenciar conta</em></li>
-  </ul>
-</p>
-
-# Possíveis Usuários
-
-* *Qualquer um interessado em adquirir um Livro*
-
+## Possíveis Usuários
+- Qualquer pessoa interessada em adquirir um livro.
