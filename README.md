@@ -1,4 +1,4 @@
-<h2 align="center" style="color: #007BFF;" class="text-center"> Sobre o Projeto - MononokeTales </h2>
+<h2 align="center" style="color: #007BFF;" class="text-center">MononokeTales </h2>
 
 <p align="center">
   <img src="https://cdn-icons-png.flaticon.com/128/10384/10384254.png"  alt="MononokeTales Logo", width="120", height="120">
