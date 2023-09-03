@@ -45,6 +45,7 @@ Clone o repositório, crie o banco de dados utilizando o código que o Gera e si
 3. Para realizar os testes de caixa preta, basta executar ```node nomeDoArquivo```
 4. Inicie o Projeto tanto no servidor (api) e no front com `npm start`
 
+C:\Users\pacie\OneDrive\Área de Trabalho\backend\frontend\src\assets\images\readmeCenter.png
 
 ## Sobre o Projeto
 Este Projeto foi desenvolvido como Trabalho Final da disciplina de Engenharia de Software, e tem como objetivo demonstrar a aplicação dos conceitos e práticas aprendidos ao longo do curso, com ênfase nos métodos e etapas necessárias para o bom desenvolvimento de software.
