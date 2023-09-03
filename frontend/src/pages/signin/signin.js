@@ -7,18 +7,65 @@ import {ToastContainer} from 'react-toastify'
 import { Link, Redirect} from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import {useNavigate} from "react-router-dom"
-
+import img from "../../assets/images/mononoke.jpg"
 //flex-direction: column;
+const Container = styled.div`
+  display: flex;
+  justify-content: center; /* Alinhe à esquerda */
+`;
+
+// Estilização para o quadrado dos formulários
+const FormSquare = styled.div`
+  display: flex;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 5px #ccc;
+  border-radius: 5px;
+  width: 1200px;
+  height: 800px;
+  margin-right: 20px; /* Espaço à direita para a imagem */
+`;
+
 const FormContainer = styled.form`
+  flex: 1;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 10px;
   flex-wrap: wrap;
+  background-color: #F8F8FF;
+  padding: 20px;
+  box-shadow: 0px 0px 5px #ccc;
+  border-radius: 5px;
+  height: 500px;
+`;
+const RightImage = styled.img`
+  width: 570px; /* Largura da imagem */
+  position: relative;
+  height: 720px;
+  bottom: 20px;
+  left: 20px;
+  margin-left: 20px
+`;
+
+const LeftColumn = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   background-color: #fff;
   padding: 20px;
   box-shadow: 0px 0px 5px #ccc;
   border-radius: 5px;
+  margin-right: auto;
+`;
+
+const RightColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: auto;
 `;
 
 const InputArea = styled.div`
@@ -27,7 +74,7 @@ const InputArea = styled.div`
 `;
 
 const Input = styled.input`
-  width: 120px;
+  width: 160px;
   padding: 0 10px;
   border: 1px solid #bbb;
   border-radius: 5px;
@@ -102,22 +149,31 @@ function Login() {
   }, [])
   return (
     <div>
-    <FormContainer onSubmit={handleSubmit}>
-      <InputArea>
+      <Container> 
+      <FormSquare>
+        <LeftColumn>
+    <FormContainer onSubmit={handleSubmit} >
+      <InputArea style={{position:'relative', top:'140px', left:'40px'}}>
         <Label>E-mail</Label>
         <Input ref={emailRef} name="email" type="email" />
       </InputArea>
       <br/>
-      <InputArea>
+      <InputArea style={{position:'relative', top:'140px', left:'40px'}}>
         <Label>Senha</Label>
         <Input ref={senhaRef} name="Senha" type="password" />
       </InputArea>
-      <Button type="submit">Entrar</Button>
-      <h3>
+      <Button style={{position:'relative', top:'140px', left:'40px'}} type="submit">Entrar</Button >
+      <h3 style={{position:'relative', top:'140px', fontSize:'20px', left:'40px'}}>
         Não possue uma conta ? <Link to={"/signup"}>Registre-se</Link>
       </h3>
       <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} />
+      <RightColumn >
+      <RightImage  src={img} alt="a"/>
+      </RightColumn>
     </FormContainer>
+    </LeftColumn>
+    </FormSquare>
+    </Container>
     </div>
   );
 }

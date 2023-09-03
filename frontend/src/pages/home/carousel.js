@@ -4,7 +4,9 @@ import banner01 from '../../assets/images/bookstore03.png';
 import banner02 from '../../assets/images/bookstore02.png';
 import banner03 from '../../assets/images/bookstore01.jpg';
 import NavbarPosLogin from '../navbar-footer/logged-navbar';
-
+import mg from '../../assets/images/mg03.png'
+import mg2 from '../../assets/images/mg02.png'
+import mg3 from '../../assets/images/berserk.jpg'
 function Carousel() {
   return (
     <div>
@@ -12,17 +14,18 @@ function Carousel() {
       <div
         id="carouselExampleControlsNoTouching"
         className="carousel slide"
-        data-bs-touch="false"
+        data-bs-touch="false" 
+        
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={banner01}  style={{ height:'450px'}} className="d-block w-100" alt="banner1" />
+            <img src={mg}  style={{ height:'450px'}} className="d-block w-100" alt="banner1" />
           </div>
           <div className="carousel-item">
-            <img src={banner02} style={{ height:'450px'}} className="d-block w-100" alt="banner2" />
+            <img src={mg2} style={{ height:'450px'}} className="d-block w-100" alt="banner2" />
           </div>
           <div className="carousel-item">
-            <img src={banner03} style={{ height:'450px'}} className="d-block w-100" alt="banner3" />
+            <img src={mg3} style={{ height:'450px'}} className="d-block w-100" alt="banner3" />
           </div>
         </div>
         <button

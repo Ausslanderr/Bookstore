@@ -6,6 +6,7 @@ import {useNavigate} from "react-router-dom"
 import { useState } from 'react';
 import React, { useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
+import japan from '../../assets/images/japan.png'; // substitua o caminho pela localização correta da imagem
 
 function NavbarPosLogin(){
   const { signout } = useAuth();
@@ -24,12 +25,19 @@ function NavbarPosLogin(){
   const toggleOptions = () => {
     setShowOptions(!showOptions);
   }; 
+  const navbarStyle = {
+    backgroundColor: "#fff", // Use a Japanese-inspired color (e.g., gold)
+    borderBottom: "2px solid #DC143C", // Border color (e.g., crimson)
+  };
+  const background = {
+    backgroundColor: "#25274D",
+  }
   console.log(user);
     return (
-      <div style={{color:'gray'}}>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary py-3">
-          <div className="container-fluid">
-            <img src={logo} alt="GameDame" style={{width:'45px', height:'45px'}} />
+      <div style={background}>
+        <nav style={navbarStyle} /*className="navbar navbar-expand-lg bg-body-tertiary py-3" */ className="navbar navbar-expand-lg navbar-light">
+          <div  className="container-fluid" >
+            <img src={japan} alt="GameDame" style={{width:'45px', height:'45px'}} />
             <button
               className="navbar-toggler"
               type="button"
@@ -41,11 +49,11 @@ function NavbarPosLogin(){
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div className="collapse navbar-collapse"  id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <Link to={"/"}>
-                  <a className="nav-link active" aria-current="page" href="#">
+                  <a  className="nav-link active" aria-current="page" href="#">
                     Home
                   </a>
                   </Link>
@@ -53,6 +61,7 @@ function NavbarPosLogin(){
                 
                 <li className="nav-item dropdown">
                   <a
+                   
                     className="nav-link dropdown-toggle"
                     href="#"
                     role="button"
@@ -86,7 +95,7 @@ function NavbarPosLogin(){
                 </li>
                 <li className="nav-item">
                   <Link to={"/sobre"}>
-                  <a className="nav-link" href="#">
+                  <a   className="nav-link" href="#">
                     Sobre Nós
                   </a>
                   </Link>
@@ -134,7 +143,7 @@ function NavbarPosLogin(){
               </Link>
               ) : (
                 <Link to="/login">
-                  <button className="btn btn-outline-success" type="submit">
+                  <button className="btn btn-outline-danger" type="submit">
                     Login
                   </button>
                 </Link>
@@ -150,7 +159,7 @@ function NavbarPosLogin(){
                 )
                 :
                 (<Link to={"/signup"}>
-                <button className="btn btn-outline-success" type="submit">
+                <button className="btn btn-outline-danger" style={{marginLeft:'10px'}} type="submit">
                   Signup
                 </button>
                 </Link>)
