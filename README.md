@@ -19,6 +19,18 @@ A MononokeTales é um website especializado na venda de mangás e comics, oferec
   <img src="https://img.shields.io/badge/FrontEnd-React-blue" alt="FrontEnd React">
   <img src="https://img.shields.io/badge/FrontEnd-Bootstrap-blue" alt="FrontEnd Bootstrap">
 </p>
+### Built With
+
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
+* [![Next][Next.js]][Next-url]
+* [![React][React.js]][React-url]
+* [![Vue][Vue.js]][Vue-url]
+* [![Angular][Angular.io]][Angular-url]
+* [![Svelte][Svelte.dev]][Svelte-url]
+* [![Laravel][Laravel.com]][Laravel-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![JQuery][JQuery.com]][JQuery-url]
 
 # Funcionalidades Imprescindíveis
 
