@@ -38,6 +38,12 @@ Projeto Desenvolvido exclusivamente por:
 ## Possíveis Usuários do Sistema
 - Qualquer pessoa interessada em cultura japonesa e mangás no geral.
 
+## Estilo de Design 
+
+![readmeImage](https://github.com/Ausslanderr/MononokeTales/assets/81874524/6537960a-e34c-4930-90cb-ca8f3716cc2b)
+
+<!-- ![image](https://github.com/Ausslanderr/MononokeTales/assets/81874524/c0f3b65d-c5dc-4042-8460-6c28befe3d27)
+-->
 
 
 ## Como Usar
@@ -45,8 +51,7 @@ Clone o repositório, crie o banco de dados utilizando o código que o Gera e si
 1. Acesse o diretório principal e use o comando ```npm install```
 2. Faça isso também para os diretórios `api` e `frontend`
 3. Para realizar os testes de caixa preta, basta executar ```node nomeDoArquivo```
-4. Inicie o Projeto tanto no servidor (api) e no front com `npm start`
-
+4. Inicie o Projeto tanto no servidor (api) quanto no client (frontend) com `npm start`
 
 ## Sobre o Projeto
 Este Projeto foi desenvolvido como Trabalho Final da disciplina de Engenharia de Software, e tem como objetivo demonstrar a aplicação dos conceitos e práticas aprendidos ao longo do curso, com ênfase nos métodos e etapas necessárias para o bom desenvolvimento de software.
