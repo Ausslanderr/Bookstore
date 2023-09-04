@@ -105,7 +105,7 @@ function UserManager() {
   return (
     <div style={{textAlign:'center'}}>
       
-        <Title>GERENCIAMENTO DE USUÁRIOS</Title>
+        <Title style={{marginTop:'20px'}}>GERENCIAMENTO DE USUÁRIOS</Title>
         <Form onEdit={onEdit} setOnEdit={setOnEdit} getUsers={getUsers} />
         <Grid setOnEdit={setOnEdit} users={users} setUsers={setUsers} />
         

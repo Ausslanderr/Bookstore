@@ -3,7 +3,6 @@ import { addAddress, addAdmin, addCarrinho, addUser, alterarDadosUsuario, altera
 import { addBook, atualizarLivro, deleteBook, getLivroById, listarLivros } from "../controllers/book.js";
 const router = express.Router()
 
-
 router.get("/", getUsers)
 
 router.get("/getUserData", getuserData);

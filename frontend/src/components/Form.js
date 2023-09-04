@@ -5,6 +5,9 @@ import { toast } from "react-toastify";
 
 const FormContainer = styled.form`
   display: flex;
+  width: 1000px;
+  position: relative;
+  left:150px;
   align-items: flex-end;
   gap: 10px;
   flex-wrap: wrap;

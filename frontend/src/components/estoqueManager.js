@@ -39,8 +39,8 @@ function BookManager() {
   return (
     <>
     
-      <Container>
-        <Title>LIVROS</Title>
+      <Container style={{position:'relative', left:'100px'}}>
+        <Title style={{position:'relative', left:'180px'}}>LIVROS</Title>
         <FormEstoque onEdit={onEdit} setOnEdit={setOnEdit} getBooks={getBooks} />
         <GridEstoque setOnEdit={setOnEdit} books={books} setBooks={setBooks} />
       </Container>

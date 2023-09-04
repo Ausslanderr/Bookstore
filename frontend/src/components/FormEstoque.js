@@ -4,7 +4,10 @@ import styled from "styled-components";
 import { toast } from "react-toastify";
 
 const FormContainer = styled.form`
+  width: 1150px;
   display: flex;
+  position: relative;
+  left: 180px;
   justify-content: right;
   align-items: flex-end;
   gap: 10px;
@@ -121,7 +124,7 @@ const FormEstoque = ({ getBooks, onEdit, setOnEdit }) => {
   };
 
   return (
-    <FormContainer ref={ref} onSubmit={handleSubmit}>
+    <FormContainer ref={ref}  onSubmit={handleSubmit}>
       <InputArea>
         <Label>Título</Label>
         <Input name="Titulo" />
