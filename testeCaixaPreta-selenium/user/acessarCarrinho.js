@@ -4,7 +4,7 @@ const { Builder, By, Key, until } = require('selenium-webdriver');
 // Função async para poder usar comandos await
 
 //Tudo Ok.
-async function realizarLogin() {
+async function acessarCarrinho() {
   // Crie um novo driver para o navegador (Chrome, nesse caso)
   let driver = await new Builder().forBrowser('chrome').build();
 
@@ -32,4 +32,4 @@ async function realizarLogin() {
 }
 
 // Chame a função para fazer a consulta usando o Selenium
-realizarLogin();
+acessarCarrinho();

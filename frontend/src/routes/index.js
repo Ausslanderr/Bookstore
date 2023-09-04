@@ -79,13 +79,9 @@ const RoutesApp = () => {
                     <Route path="/gerenciar-pedidos" element={<ManagerPedidos />} />
                     <Route path="/gerenciar-usuarios" element={<UserManager />} />
                     <Route path="gerenciar-estoque" element={<BookManager />} />
-                        
-                    
                     <Route path="/pedidos" element={<Pedidos />} />
                     <Route path="/conta" element={<Conta />} />
                     <Route path="/carrinho" element={<Carrinho />} />
-                     
-
                     {/* Rotas comuns acessíveis para todos */}
                     <Route path="/app" element={<App />} />
                     <Route path="/sobre" element={<Sobre />} />
@@ -96,7 +92,6 @@ const RoutesApp = () => {
                     <Route path="/add" element={<Add />} />
                     <Route path="/books" element={<Books />} />
                     <Route path="/payment" element={<ModalPagamento />} />
-
                     {/* Rota padrão para URLs não correspondentes */}
                     <Route path="*" element={<Home />} />
                 </Routes>

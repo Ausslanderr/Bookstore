@@ -19,24 +19,6 @@ app.use((req, res, next)=>{
 })
 
 app.use(express.json());
-/*
-app.use(cors({
-    origin: ["http://localhost:3000"], //antes tava 3000
-    methods: ["GET", "POST","PUT", "DELETE"],
-    credentials: true,
-    allowedHeaders: [
-      'X-CSRF-Token',
-        'X-Requested-With',
-        'Accept',
-        'Accept-Version',
-        'Content-Length',
-        'Content-MD5',
-        'Content-Type',
-        'Date',
-        'X-Api-Version',
-        'Authorization'
-    ],
-}));*/
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -435,28 +417,6 @@ export const addUser = (req, res) => {
       return res.status(200).json("Usuário criado com sucesso.");
     });
   });
-
-  /*
-  const q =
-    "INSERT INTO usuario(`nome`, `email`, `fone`, `data_nascimento`, `CPF`, `Senha` ) VALUES(?)";
-  console.log("cheguei aqui no add User;")
-  const values = [
-    req.body.nome,
-    req.body.email,
-    req.body.fone,
-    req.body.data_nascimento,
-    req.body.CPF,
-    req.body.Senha
-  ];
-
-  db.query(q, [values], (err) => {
-    console.log("cheguei aqui também");
-    //if (err) return res.json(err);
-    if (err){
-      return res.status(500).json("Erro ao criar usuário.");
-    }
-    return res.status(200).json("Usuário criado com sucesso.");
-  });*/
 };
 
 
@@ -483,18 +443,6 @@ export const logOut = (req, res)=> {
   }
   
 }
-/*
-export const logOut = (req, res) => {
-  req.session.destroy((err)=>{
-    if(err){
-      console.error("Logout error: ", err);
-      return res.status(500).json("error logging out"); 
-    }
-    res.clearCookie("userId");
-    res.status(200).json("Logged out successfully");
-  })
-}
-*/
 
 
 export const logUser = (req, res) => {
@@ -688,7 +636,6 @@ export const deletarItemPedido = async (req, res)=>{
   }
 }
 export const cadastrarPedido = async (req,res)=> {//passando o IdPedido
-  //const {idPedido, UsuarioId, statusPedido, totalPedido, dataPedido} = req.body;
   console.log("entrei no cadastrar");
   try {   
     const {
